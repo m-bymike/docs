@@ -6,25 +6,13 @@
  5.2.*    | 1.1.*
  5.3.*    | 1.2.*
  5.4.*    | 1.3.*
+ 5.5.*    | 1.4.*
+ 5.6.*    | 1.4.*
 
 Install this package with composer:
 
 ```
-composer require "laravel-doctrine/orm:1.3.*"
-```
-
-After updating composer, add the ServiceProvider to the providers array in `config/app.php`
-
-```php
-LaravelDoctrine\ORM\DoctrineServiceProvider::class,
-```
-
-Optionally you can register the EntityManager, Registry and/or Doctrine facade:
-
-```php
-'EntityManager' => LaravelDoctrine\ORM\Facades\EntityManager::class,
-'Registry'      => LaravelDoctrine\ORM\Facades\Registry::class,
-'Doctrine'      => LaravelDoctrine\ORM\Facades\Doctrine::class,
+composer require "laravel-doctrine/orm:1.4.*"
 ```
 
 To publish the config use:
@@ -39,7 +27,7 @@ Available environment variables inside the config are: `APP_DEBUG`, `DOCTRINE_ME
 > By default, Laravel's application skeleton has its `Model` classes in the `app/` folder. With Doctrine, you'll need to
 > create a dedicated folder for your `Entities` and point your `config/doctrine.php` `paths` array to it.
 > If you don't, Doctrine will scan your whole `app/` folder for files, which will have a huge impact on performance!
-> 
+>
 > ```
 > 'paths' => [
 >     base_path('app/Entities'),
